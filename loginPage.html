@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCore Login</title>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="homePage.html" ><button class="backButton">Back</button></a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="box">
+            <div class="innerBox">
+                <div class="formWrap">
+                    <form action="loginPage.html" autocomplete="off" class="signIn">
+                        <div class="logo">
+                            <img src="assets/datacorelogo1.png" alt="DataCore">
+                            <h4>DataCore</h4>
+                        </div>
+
+                        <div class="heading">
+                            <h2>Welcome back</h2>
+                            <h6>Not registered yet?</h6>
+                            <a href="#" class="toggle">Sign Up</a>
+                        </div>
+
+                        <div class="form">
+
+                            <div class="inputWrap">
+                                <input 
+                                    type="text" 
+                                    minlength="4" 
+                                    class="inputField" 
+                                    autocomplete="off" 
+                                    required
+                                />
+                                <label>Name</label>
+
+                            </div>
+
+                            <div class="inputWrap">
+                                <input 
+                                    type="password" 
+                                    minlength="4" 
+                                    class="inputField" 
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label>Password</label>
+
+                            </div>
+
+                            <input type="submit" value="Sign In" class="signButton" />
+
+                            <p class="text">
+                                Forgotten your password or yout login details?
+                                <a href="#">Get Help</a> Sigining in
+                            </p>
+
+
+
+                        </div>
+                    </form>
+
+                    <form action="loginPage.html" autocomplete="off" class="signUp">
+                        <div class="logo">
+                            <img src="assets/datacorelogo1.png" alt="DataCore">
+                            <h4>DataCore</h4>
+                        </div>
+
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account?</h6>
+                            <a href="#" class="toggle">Sign In</a>
+                        </div>
+
+                        <div class="form">
+
+                            <div class="inputWrap">
+                                <input 
+                                    type="text" 
+                                    minlength="4" 
+                                    class="inputField" 
+                                    autocomplete="off" 
+                                    required
+                                />
+                                <label>Name</label>
+
+                            </div>
+
+                            <div class="inputWrap">
+                                <input 
+                                    type="email" 
+                                    class="inputField" 
+                                    autocomplete="off" 
+                                    required
+                                />
+                                <label>Email</label>
+
+                            </div>
+
+                            <div class="inputWrap">
+                                <input 
+                                    type="password" 
+                                    minlength="4" 
+                                    class="inputField" 
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label>Password</label>
+
+                            </div>
+
+                            <input type="submit" value="Sign Up" class="signButton" />
+
+                            <p class="text">
+                                By sigining up, I agree to the 
+                                <a href="#">Terms of Services</a> and 
+                                <a href="#">Privacy Policy</a>
+                            </p>
+
+
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="carousel">
+                    <div class="imageWrapper">
+                        <img src="/assets/image1.png" class="image img1 show" alt="img 1">
+                        <img src="/assets/image2.png" class="image img2" alt="img 2">
+                        <img src="/assets/image3.png" class="image img3" alt="img 3">
+                    </div>
+
+                    <div class="textSlider">
+                        <div class="textWrap">
+                            <div class="textGroup">
+                                <h2>All your data in one place</h2>
+                                <h2>AI offers precision and feedback</h2>
+                                <h2>View and modify in a wink</h2>
+                            </div>
+                        </div>
+
+                        <div class="bullet">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Javascript file -->
+    <script src="loginScript.js"></script>
+</body>
+</html>

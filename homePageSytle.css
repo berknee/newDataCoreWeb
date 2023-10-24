@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;1,800&display=swap');
+
+*{
+    /* background-color: rgb(65, 196, 236); */
+    color: whitesmoke;
+    font-family: 'Exo', sans-serif;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: #405964;
+}
+
+
+/*nav bar*/
+
+nav {
+    /* height: 10px; */
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navLogo img {
+    width: 110px;
+    float: left;
+    margin: 10px 0;
+}
+
+.navButtons {
+    list-style: none;
+}
+
+.navButtons li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: x-large;
+}
+
+.navButtons a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navButtons li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: aqua;
+    transition: 0.4s linear;
+    display: block;
+}
+
+.navButtons li a:hover {          
+    color: aqua;
+}        
+
+.navButtons li a:hover::after {          
+    width: 100%;
+}
+
+.loginButton{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.loginButton:hover{
+    transform: scale(1.1);
+}
+
+
+/*home section */
+
+#homeSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#homeSection .sectionTitle{
+    text-align: center;
+    font-size: 65px;
+}
+
+#homeSection .sectionText{
+    text-align: center;
+    font-size: 45px;
+}
+
+/* about section */
+
+#aboutSection{
+    width: 100%;
+    height: 100%;
+    /* padding: 70px 0; */
+}
+
+#aboutSection::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+#aboutSection.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+#aboutSection .aboutMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#aboutSection .aboutMain .image img{
+    width: 1000px;
+    position: relative;
+    top: 60px;
+}
+
+#aboutSection .aboutMain .aboutText h1{
+    font-size: 55px;
+}
+
+#aboutSection .aboutMain .aboutText h3{
+    font-size: 30px;
+}
+
+#aboutSection .aboutMain .aboutText p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+
+/* service section */
+
+#serviceSection{
+	width: 100%;
+	height: 100%;
+    padding-top: 171px;
+}
+
+#serviceSection::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+#serviceSection.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#serviceSection .sectionTitle{
+	font-size: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 35px;
+}
+
+#serviceSection .serviceImage{
+	width: 95%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0 40px;
+}
+
+#serviceSection .serviceImage .image{
+	width: 430px;
+	height: 600px;
+	margin: auto;
+	background: #000;
+}
+
+#serviceSection .serviceImage .image img{
+	width: 100%;
+	height: 107%;
+	object-fit: cover;
+	object-position: center;
+}
+
+#serviceSection .serviceImage .image .serviceInfo a{
+	padding: 10px 20px;
+	background: #00beb4;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	position: relative;
+	left: 70%;
+	bottom: 20px;
+	transition: 0.5s;
+}
+
+#serviceSection .serviceImage .image:hover .serviceInfo a{
+	background: #009acf;  
+	color: #000;
+	border-radius: 20px;
+}
+
+#serviceSection .serviceImage .image .serviceInfo h1{
+	font-size: 30px;
+	margin: 10px 0 0 10px;
+	text-align: center;
+}	
+
+/* contact section */
+
+#contactSection{
+    width: 100%;
+	height: 100%;
+    padding-top: 32.5px;
+    margin-bottom: 70px;
+}
+
+#contactSection::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+#contactSection.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#contactSection h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+#contactSection p{
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactSection .contactBox{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#contactSection form{
+    width: 90%;
+    max-width: 600px;
+}
+
+#contactSection .inputGroup{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#contactSection input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #009acf;
+    color: #00beb4;
+    background: transparent;
+    font-size: 15px;
+}
+
+#contactSection label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #00beb4;
+    cursor: text;
+    transition: 0.2s;
+    background-color: transparent;
+}
+
+#contactSection button{
+    padding: 10px;
+    color: #00beb4;
+    outline: 0;
+    background: transparent;
+    border: 1px solid #009acf;
+    width: 103.7%;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#contactSection input:focus~label,
+#contactSection input:valid~label,
+#contactSection textarea:focus~label,
+#contactSection textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+#contactSection .contactRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contactSection .contactRow .inputGroup{
+    flex-basis: 48%;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-top: 75px;
+}
+
+#footer::before{
+    content: "";
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+#footer.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+footer .footerSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+footer .footerSection .footerTitle{
+    margin: 0 auto;
+}
+
+footer .footerSection .footerTitle h1{
+    margin: 20px 0;
+    color: #ffffff;
+}
+footer .footerSection .footerTitle .center{
+    text-align: center;
+}
+
+footer .footerSection .footerTitle a{
+    text-decoration: none;
+}
+
+footer .footerSection .footerTitle p i{
+    margin-right: 10px;
+    color: #AB0508;
+    transition: ease-in-out 0.2s;
+}
+
+footer .footerSection .footerTitle p:hover i{
+    color: #AB0508;
+    transform: scale(1.3);
+}
+
+footer .footerSection .footerTitle p{
+    color: white;
+    margin: 9px 0;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+footer .footerSection .footerTitle p:hover{
+    transform: translateX(10px);
+}
+
+footer .footerSection .footerTitle p i{
+    margin-right: 10px;
+    color: #ffffff;
+    transition: ease-in-out 0.2s;
+}
+
+footer .footerSection .footerTitle p:hover i{
+    color: #ffffff;
+    transform: scale(1.3);
+}
+
+footer .footerSection .footerTitle a{
+    text-decoration: none;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar{
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #000000;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(to top, #009acf  , #00beb4);
+}
