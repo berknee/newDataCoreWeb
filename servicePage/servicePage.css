@@ -283,11 +283,80 @@ header .container{
     animation: appear 1s 1 both;
 }
 
+#features .container{
+    margin-top: -20%;
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+}
+
+#features .container h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+
+#features .container h1:after{
+    content: '';
+    background-color: #303ef7;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#features .container .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+#features .container .row .service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s !important;
+}
+
+#features .container .row .service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #303ef7;
+}
+
+#features .container .row .service h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#features .container .row .service:hover{
+    background: #303ef7;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#features .container .row .service:hover i{
+    color: #fff;
+}
+
 @keyframes appear{
     0%{
         clip-path: circle(30% at -25% -25%);
     }
     100%{
         clip-path: circle(150% at 0 0);
+    }
+}
+
+@media screen and (max-width: 870px){
+    .row{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
