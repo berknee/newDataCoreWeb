@@ -38,10 +38,6 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.overlay{
-    display: none;
-}
-
 .stopScrolling{
     height: 100%;
     overflow: hidden;
@@ -55,6 +51,37 @@ a{
     text-decoration: none;
 }
 
+.leftCircle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #073d5e;
+    clip-path: circle(600px at right 800px);
+}
+
+.socialMediaIcons{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socialMediaIcons li{
+    list-style: none;
+}
+
+.socialMediaIcons li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+
 .landingPage{
     position: relative;
     padding: 1.7rem 0 2rem;
@@ -64,6 +91,7 @@ a{
     background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .container{
@@ -196,46 +224,6 @@ header .container{
     transform: scale(1) !important;
 }
 
-.shape{
-    position: absolute;
-    z-index: 0;
-    width: 500px;
-    bottom: -180px;
-    left: -15px;
-    opacity: 0.1;
-}
-
-.leftCircle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #073d5e;
-    clip-path: circle(600px at right 800px);
-}
-
-.socialMediaIcons{
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.socialMediaIcons li{
-    list-style: none;
-}
-
-.socialMediaIcons li a{
-    display: inline-block;
-    margin: 5px 0;
-    transform: scale(0.6);
-}
-
 .toggleBtn{
     display: inline-block;
     border: none;
@@ -278,125 +266,21 @@ header .container{
     display: none;
 }
 
+.shape{
+    position: absolute;
+    z-index: 0;
+    width: 500px;
+    bottom: -180px;
+    left: -15px;
+    opacity: 0.1;
+}
+
 .copy{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     animation: appear 1s 1 both;
-}
-
-#contactSection{
-    width: 100%;
-	height: 100%;
-    padding-top: 32.5px;
-    margin-bottom: 70px;
-}
-
-#contactSection::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 100;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease-out;
-}
-
-#contactSection.show::before{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#contactSection h1{
-    font-size: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-#contactSection p{
-    font-size: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#contactSection .contactBox{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    z-index: 90;
-    margin-bottom: 90px;
-}
-
-#contactSection form{
-    width: 90%;
-    max-width: 600px;
-}
-
-#contactSection .inputGroup{
-    margin-bottom: 30px;
-    position: relative;
-}
-
-#contactSection input, textarea{
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #009acf;
-    color: #00beb4;
-    background: transparent;
-    font-size: 15px;
-}
-
-#contactSection label{
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: #00beb4;
-    cursor: text;
-    transition: 0.2s;
-    background-color: transparent;
-}
-
-#contactSection button{
-    padding: 10px;
-    color: #00beb4;
-    outline: 0;
-    background: transparent;
-    border: 1px solid #009acf;
-    width: 103.7%;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-#contactSection input:focus~label,
-#contactSection input:valid~label,
-#contactSection textarea:focus~label,
-#contactSection textarea:valid~label{
-    top: -35px;
-    font-size: 14px;
-}
-
-#contactSection .contactRow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#contactSection .contactRow .inputGroup{
-    flex-basis: 48%;
 }
 
 @keyframes appear{
