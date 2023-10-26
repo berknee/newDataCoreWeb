@@ -8,6 +8,7 @@
     --darkTwo: #45424b;
     --lightOne: #919191;
     --lightTwo: #aaa;
+    --circle: #b7d2f5;
 }
 
 .dark{
@@ -18,6 +19,7 @@
     --darkTwo: #fff;
     --lightOne: #ccc;
     --lightTwo: #e7e3e3;
+    --circle: #ecf1fa;
 }
 
 *,
@@ -57,7 +59,7 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #073d5e;
+    background: var(--circle);
     clip-path: circle(600px at right 800px);
 }
 
@@ -255,8 +257,9 @@ header .container{
 }
 
 .mainPageImg{
-    width: 99%;
-    transform: translate(15%, 25px);
+    width: 120%;
+    
+    transform: translate(10%, 50px);
 }
 
 .toggleBtn{

@@ -48,7 +48,7 @@ main{
     width: 100%;
     min-height: 100vh;
     overflow:hidden;
-    background-color: #72bec6;
+    background-color: #f1f8fc;
     padding: 2rem;
     display: flex;
     align-items: center;

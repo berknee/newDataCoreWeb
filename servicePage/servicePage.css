@@ -8,6 +8,9 @@
     --darkTwo: #45424b;
     --lightOne: #919191;
     --lightTwo: #aaa;
+    --lightThree: #e7ece8;
+    --circle: #b7d2f5;
+    
 }
 
 .dark{
@@ -18,6 +21,8 @@
     --darkTwo: #fff;
     --lightOne: #ccc;
     --lightTwo: #e7e3e3;
+    --lightThree: #e7ece8;
+    --circle: #ecf1fa;
 }
 
 *,
@@ -57,7 +62,7 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #073d5e;
+    background: var(--circle);
     clip-path: circle(300px at right 750px);
 }
 
@@ -320,7 +325,7 @@ header .container{
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    background: transparent;
+    background: var(--lightThree);
     transition: transform 0.5s, background 0.5s !important;
 }
 
@@ -375,6 +380,7 @@ header .container{
     color: #555555;
     margin: 15px;
     z-index: 100;
+    background: var(--lightThree);
 }
 
 .planHighlighted{
