@@ -58,7 +58,7 @@ a{
     width: 100%;
     height: 100%;
     background: #073d5e;
-    clip-path: circle(600px at right 800px);
+    clip-path: circle(300px at right 750px);
 }
 
 .socialMediaIcons{
@@ -284,15 +284,14 @@ header .container{
 }
 
 #features .container{
-    margin-top: -20%;
     width: 100%;
     height: 100%;
-    padding: 0 8%;
+    padding: 0 !important;
 }
 
 #features .container h1{
     text-align: center;
-    padding-top: 10%;
+    padding-top: 70px;
     margin-bottom: 60px;
     font-weight: 600;
     position: relative;
@@ -311,7 +310,7 @@ header .container{
 
 #features .container .row{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
 }
 
@@ -346,17 +345,153 @@ header .container{
     color: #fff;
 }
 
+.planSection h1.title{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+
+.planSection h1.title:after{
+    content: '';
+    background-color: #303ef7;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plans{
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    margin: 15px;
+    z-index: 100;
+}
+
+.planHighlighted{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.planSpecial{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: #007c64;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+
+.planHeader{
+    padding: 25px;
+    background-color: #009578;
+    color: #fff;
+}
+
+.planTitle,
+.planSummary{
+    margin: 0;
+    text-align: center;
+}
+
+.planTitle{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.planSummary{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.planDescription{
+    padding: 25px;
+}
+
+.planlist{
+    padding: 0;
+    margin: 0;
+}
+
+.planFeature{
+    list-style: none;
+    margin: 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.planFeature:not(:last-child){
+    margin-bottom: 0.5em;
+}
+
+.planFeature::before{
+    content: "\2714";
+    color: #009578;
+    position: absolute;
+    left: 0;
+}
+
+.planAction{
+    padding: 25px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+.planButton{
+    display: inline-block;
+    margin: 15px auto;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #009578;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #009578;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+}
+
+.planButton:hover{
+    background: #009578;
+    color: #fff;
+}
+
+.planCost{
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #000;
+}
+
+.planCostText{
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.planContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
 @keyframes appear{
     0%{
         clip-path: circle(30% at -25% -25%);
     }
     100%{
         clip-path: circle(150% at 0 0);
-    }
-}
-
-@media screen and (max-width: 870px){
-    .row{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }

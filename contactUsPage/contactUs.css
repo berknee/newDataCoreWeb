@@ -291,18 +291,7 @@ header .container{
 	height: 100%;
     padding-top: 32.5px;
     margin-bottom: 70px;
-}
-
-#contactSection::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 100;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease-out;
 }
 
 #contactSection.show::before{
