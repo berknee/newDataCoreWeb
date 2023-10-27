@@ -19,9 +19,8 @@
     --darkTwo: #fff;
     --lightOne: #ccc;
     --lightTwo: #e7e3e3;
-    --circle: #ecf1fa;
+    --circle: #213c4dff;
 }
-
 *,
 *::before,
 *::after{
@@ -312,6 +311,7 @@ header .container{
 #aboutSection .aboutMain .aboutText h1{
     font-size: 2.4rem !important;
     margin-top: 100px;
+    color: var(--darkOne);
 }
 
 
@@ -322,6 +322,7 @@ header .container{
     padding-right: 50px;
     max-width: 600px;
     line-height: 2.1;
+    color: var(--darkTwo);
 }
 
 @keyframes appear{

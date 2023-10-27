@@ -22,7 +22,7 @@
     --lightOne: #ccc;
     --lightTwo: #e7e3e3;
     --lightThree: #dfe2f1;
-    --circle: #ecf1fa;
+    --circle: #213c4dff;
 }
 
 *,
@@ -300,11 +300,12 @@ header .container{
     margin-bottom: 60px;
     font-weight: 600;
     position: relative;
+    color: var(--darkOne);
 }
 
 #features .container h1:after{
     content: '';
-    background-color: #303ef7;
+    background-color: #30aef7;
     width: 100px;
     height: 5px;
     position: absolute;
@@ -341,7 +342,7 @@ header .container{
 }
 
 #features .container .row .service:hover{
-    background: var(--hoverColor);
+    background: #19aff3ff;
     color: #fff;
     transform: scale(1.05);
 }
@@ -360,11 +361,12 @@ header .container{
     margin-bottom: 60px;
     font-weight: 600;
     position: relative;
+    color: var(--darkOne);
 }
 
 .planSection h1.title:after{
     content: '';
-    background-color: #303ef7;
+    background-color: #30aef7;
     width: 100px;
     height: 5px;
     position: absolute;
@@ -396,13 +398,13 @@ header .container{
     text-align: center;
     font-weight: bold;
     color: #fff;
-    background: var(--hoverColor);
+    background: #19ccd7ff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
 }
 
 .planHeader{
     padding: 25px;
-    background-color: var(--mainColor);
+    background-color: #19aff3ff;
     color: #fff;
 }
 
