@@ -304,19 +304,24 @@ header .container{
     top: 60px;
 }
 
-#aboutSection .aboutMain .aboutText h1{
-    font-size: 55px;
+#aboutSection .aboutMain .aboutMain{
+    text-transform: capitalize;
+    line-height: 1.4;
 }
 
-#aboutSection .aboutMain .aboutText h3{
-    font-size: 30px;
+#aboutSection .aboutMain .aboutText h1{
+    font-size: 2.4rem !important;
+    margin-top: 100px;
 }
+
 
 #aboutSection .aboutMain .aboutText p{
-    width: 650px;
-    text-align: justify;
-    margin-right: 30px;
-    line-height: 22px;
+    font-weight: 500;
+    font-size: 1.01rem;
+    margin: 1.9rem 0 2.5rem;
+    padding-right: 50px;
+    max-width: 600px;
+    line-height: 2.1;
 }
 
 @keyframes appear{

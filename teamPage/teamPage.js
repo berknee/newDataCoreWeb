@@ -53,3 +53,62 @@ function events(){
 }
 
 events();
+
+/* the first */
+
+var swiper = new Swiper('.mySwiper1', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination1',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+
+    },
+});
+
+/* the second */
+
+var swiper = new Swiper('.mySwiper2', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+
+    },
+});
+

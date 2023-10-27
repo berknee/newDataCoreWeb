@@ -259,7 +259,7 @@ header .container{
 .mainPageImg{
     width: 120%;
     
-    transform: translate(10%, 50px);
+    transform: translate(-10%, 50px);
 }
 
 .toggleBtn{

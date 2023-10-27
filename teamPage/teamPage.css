@@ -34,6 +34,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all 0.5s ease;
 }
 
 body{
@@ -284,6 +285,170 @@ header .container{
     z-index: 100;
     animation: appear 1s 1 both;
 }
+
+#team{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#team h1{
+    margin-top: 100px;
+    font-size: 2.2rem;
+}
+
+#team h2{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 1.8rem;
+}
+
+#team .card{
+    position: relative;
+    background: var(--mainColor);
+    border-radius: 20px;
+    padding: 20px 60px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#team .card .image{
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border: 3px solid var(--lightTwo);
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#team .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#team .card h3 {
+    text-align: center;
+}
+
+#team .card p{
+    color: orangered;
+    text-align: center;
+}
+
+#team .swiper-container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#team .swiper{
+    margin: 0 auto;
+    cursor: grab;
+}
+
+#team .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#team .swiper-button-next1,
+#team .swiper-button-prev1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #64bcf4;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#team .swiper-button-next1::after,
+#team .swiper-button-prev1::after{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+#team .swiper-button-next1:hover{
+    transform: scale(1.2) translateX(80%);
+}
+
+#team .swiper-button-prev1:hover{
+    transform: scale(1.2) translateX(-80%);
+}
+
+#team .swiper-button-next1{
+    transform: translateX(50%);
+}
+
+#team .swiper-button-prev1{
+    transform: translateX(-50%);
+}
+
+#team .swiper-pagination1{
+    transform: translateY(50%);
+}
+
+#team .swiper-pagination-bullet{
+    background: #000;
+    width: 15px;
+    height: 15px;
+    margin-top: 80px;
+    z-index: 80;
+}
+
+/*the second one */
+
+.last{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#team .swiper-button-next2,
+#team .swiper-button-prev2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #64bcf4;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#team .swiper-button-next2::after,
+#team .swiper-button-prev2::after{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+#team .swiper-button-next2:hover{
+    transform: scale(1.2) translateX(80%);
+}
+
+#team .swiper-button-prev2:hover{
+    transform: scale(1.2) translateX(-80%);
+}
+
+#team .swiper-button-next2{
+    transform: translateX(50%);
+}
+
+#team .swiper-button-prev2{
+    transform: translateX(-50%);
+}
+
+#team .swiper-pagination2{
+    transform: translateY(50%);
+}
+
 
 @keyframes appear{
     0%{

@@ -8,7 +8,7 @@
     --darkTwo: #45424b;
     --lightOne: #919191;
     --lightTwo: #aaa;
-    --lightThree: #e7ece8;
+    --lightThree: #dfe2f1;
     --circle: #b7d2f5;
     
 }
@@ -21,7 +21,7 @@
     --darkTwo: #fff;
     --lightOne: #ccc;
     --lightTwo: #e7e3e3;
-    --lightThree: #e7ece8;
+    --lightThree: #dfe2f1;
     --circle: #ecf1fa;
 }
 
@@ -325,7 +325,7 @@ header .container{
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    background: var(--lightThree);
+    background: var(--mainColor);
     transition: transform 0.5s, background 0.5s !important;
 }
 
@@ -341,13 +341,17 @@ header .container{
 }
 
 #features .container .row .service:hover{
-    background: #303ef7;
+    background: var(--hoverColor);
     color: #fff;
     transform: scale(1.05);
 }
 
 #features .container .row .service:hover i{
     color: #fff;
+}
+
+.planSection{
+    z-index: 60;
 }
 
 .planSection h1.title{
@@ -379,7 +383,6 @@ header .container{
     line-height: 1.5;
     color: #555555;
     margin: 15px;
-    z-index: 100;
     background: var(--lightThree);
 }
 
@@ -393,13 +396,13 @@ header .container{
     text-align: center;
     font-weight: bold;
     color: #fff;
-    background: #007c64;
+    background: var(--hoverColor);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
 }
 
 .planHeader{
     padding: 25px;
-    background-color: #009578;
+    background-color: var(--mainColor);
     color: #fff;
 }
 
@@ -442,7 +445,7 @@ header .container{
 
 .planFeature::before{
     content: "\2714";
-    color: #009578;
+    color: var(--mainColor);
     position: absolute;
     left: 0;
 }
@@ -459,7 +462,7 @@ header .container{
     margin: 15px auto;
     padding: 8px 20px;
     text-decoration: none;
-    color: #009578;
+    color: var(--mainColor);
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #009578;
@@ -469,7 +472,7 @@ header .container{
 }
 
 .planButton:hover{
-    background: #009578;
+    background: var(--mainColor);
     color: #fff;
 }
 
@@ -501,3 +504,113 @@ header .container{
         clip-path: circle(150% at 0 0);
     }
 }
+
+@media screen and (max-width: 870px) {
+
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    .socialMediaIcons{
+        flex-direction: row;
+        top: 98%;
+    }
+  
+    .navButtons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--mainColor);
+      z-index: 95;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: 0.5s;
+    }
+  
+    .navButtons ul {
+      flex-direction: column;
+    }
+  
+    .navButtons a {
+      color: #fff;
+      margin-left: 0;
+      padding: 2rem 0;
+    }
+  
+    .navButtons .button {
+      background: none;
+    }
+  
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+  
+    .landingPage.active .navButtons {
+      transform: translateX(0);
+      box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+  
+    .landingPage.active .overlay {
+      pointer-events: all;
+      opacity: 1;
+    }
+  
+    .logo h3 {
+      font-size: 1.25rem;
+    }
+  
+    .shape {
+      bottom: -180px;
+      left: -150px;
+      z-index: 2;
+    }
+
+    .leftCircle{
+        clip-path: circle(10000px at right 2000px);
+    }
+
+    .planContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        justify-items: center;
+    }
+
+    #features .container .row{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #features .container .row .service{
+        height: auto;
+        width: 220px;
+    }
+
+
+
+  }
+  
+  @media screen and (max-width: 470px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .leftCircle{
+        clip-path: circle(550px at right 1000px);
+    }
+  
+  }
