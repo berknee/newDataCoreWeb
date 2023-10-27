@@ -238,6 +238,7 @@ header .container{
     color: var(--darkOne);
     text-transform: capitalize;
     line-height: 1.4;
+    display: inline-block;
 }
 
 .title h2{
@@ -328,6 +329,10 @@ header .container{
     100%{
         clip-path: circle(150% at 0 0);
     }
+}
+
+@keyframes typing{
+    from {width: 0;}
 }
 
 @media screen and (max-width: 870px) {
