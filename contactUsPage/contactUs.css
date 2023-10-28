@@ -226,6 +226,7 @@ header .container{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 10;
 }
 
 .socialMediaIcons li{
@@ -293,7 +294,7 @@ header .container{
 	height: 100%;
     padding-top: 32.5px;
     margin-bottom: 70px;
-    z-index: 100;
+    z-index: 10;
 }
 
 #contactSection.show::before{
@@ -487,7 +488,7 @@ header .container{
     }
 
     .leftCircle{
-        clip-path: circle(550px at right 1000px);
+        clip-path: circle(800px at right 500px);
     }
   
   }

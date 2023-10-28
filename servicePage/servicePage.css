@@ -75,6 +75,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 20;
 }
 
 .socialMediaIcons li{
@@ -322,7 +323,10 @@ header .container{
 
 #features .container .row .service{
     text-align: center;
-    padding: 25px 10px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
@@ -333,7 +337,7 @@ header .container{
 #features .container .row .service i{
     font-size: 40px;
     margin-bottom: 10px;
-    color: #303ef7;
+    color: #084284;
 }
 
 #features .container .row .service h2{
@@ -352,7 +356,7 @@ header .container{
 }
 
 .planSection{
-    z-index: 60;
+    z-index: 10;
 }
 
 .planSection h1.title{

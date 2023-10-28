@@ -64,6 +64,7 @@ a{
     clip-path: circle(600px at right 800px);
 }
 
+
 .socialMediaIcons{
     position: absolute;
     top: 50%;
@@ -72,7 +73,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    z-index: 10;
 }
 
 .socialMediaIcons li{
@@ -81,7 +83,7 @@ a{
 
 .socialMediaIcons li a{
     display: inline-block;
-    margin: 5px 0;
+    margin-top: 1100px;
     transform: scale(0.6);
 }
 
@@ -294,6 +296,7 @@ header .container{
     justify-content: center;
     align-items: center;
     padding: 0 50px;
+    z-index: 10;
 }
 
 #team h1{
@@ -412,7 +415,7 @@ header .container{
 
 .last{
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 #team .swiper-button-next2,
@@ -460,3 +463,94 @@ header .container{
         clip-path: circle(150% at 0 0);
     }
 }
+
+@media screen and (max-width: 870px) {
+
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    .socialMediaIcons{
+        flex-direction: row;
+        /* top: 98%; */
+    }
+  
+    .navButtons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--mainColor);
+      z-index: 95;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: 0.5s;
+    }
+  
+    .navButtons ul {
+      flex-direction: column;
+    }
+  
+    .navButtons a {
+      color: #fff;
+      margin-left: 0;
+      padding: 2rem 0;
+    }
+  
+    .navButtons .button {
+      background: none;
+    }
+  
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+  
+    .landingPage.active .navButtons {
+      transform: translateX(0);
+      box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+  
+    .landingPage.active .overlay {
+      pointer-events: all;
+      opacity: 1;
+    }
+  
+    .logo h3 {
+      font-size: 1.25rem;
+    }
+  
+    .shape {
+      bottom: -180px;
+      left: -150px;
+      z-index: 2;
+    }
+
+    .leftCircle{
+        clip-path: circle(10000px at right 2000px);
+    }
+
+  }
+  
+  @media screen and (max-width: 470px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .leftCircle{
+        clip-path: circle(800px at right 600px);
+    }
+  
+  }

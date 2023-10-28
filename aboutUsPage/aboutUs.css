@@ -71,6 +71,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 11;
 }
 
 .socialMediaIcons li{
@@ -288,7 +289,7 @@ header .container{
     width: 100%;
     height: 100%;
     /* padding: 70px 0; */
-    z-index: 100;
+    z-index: 10;
 }
 
 #aboutSection .aboutMain{
@@ -298,14 +299,21 @@ header .container{
 }
 
 #aboutSection .aboutMain .image img{
-    width: 130%;
+    width: 70%;
     position: relative;
     top: 60px;
+    margin-left: 40px;
+    border-radius: 20px;
 }
 
 #aboutSection .aboutMain .aboutMain{
     text-transform: capitalize;
     line-height: 1.4;
+}
+
+#aboutSection .aboutMain .aboutText
+{ 
+    width: 1000px;
 }
 
 #aboutSection .aboutMain .aboutText h1{
@@ -333,3 +341,128 @@ header .container{
         clip-path: circle(150% at 0 0);
     }
 }
+
+@media screen and (max-width: 870px) {
+
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    .socialMediaIcons{
+        flex-direction: row;
+        top: 98%;
+    }
+  
+    .navButtons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--mainColor);
+      z-index: 95;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: 0.5s;
+    }
+  
+    .navButtons ul {
+      flex-direction: column;
+    }
+  
+    .navButtons a {
+      color: #fff;
+      margin-left: 0;
+      padding: 2rem 0;
+    }
+  
+    .navButtons .button {
+      background: none;
+    }
+  
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+  
+    .landingPage.active .navButtons {
+      transform: translateX(0);
+      box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+  
+    .landingPage.active .overlay {
+      pointer-events: all;
+      opacity: 1;
+    }
+  
+    .logo h3 {
+      font-size: 1.25rem;
+    }
+  
+    .shape {
+      bottom: -180px;
+      left: -150px;
+      z-index: 2;
+    }
+
+    .leftCircle{
+        clip-path: circle(10000px at right 2000px);
+    }
+
+    #aboutSection .aboutMain{
+        display: revert;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #aboutSection .aboutMain .aboutText{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #aboutSection .aboutMain .image img{
+        display: none;
+    }
+
+    #aboutSection .aboutMain .aboutText p{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+  }
+  
+  @media screen and (max-width: 470px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .leftCircle{
+        clip-path: circle(7000px at right 500px);
+    }
+
+    #aboutSection .aboutMain{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    #aboutSection .aboutMain .aboutText p{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+  
+  }

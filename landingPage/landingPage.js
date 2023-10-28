@@ -1,11 +1,17 @@
 var toggleButton;
-var landingPage;
+var landingPage = document.querySelector(".landingPage");
 var hamburgerMenu;
+var typeWriter;
 
 function declare(){
     toggleButton = document.querySelector(".toggleBtn");
-    landingPage = document.querySelector(".landingPage");
+    // landingPage = document.querySelector(".landingPage");
     hamburgerMenu = document.querySelector(".hamburgerMenu");
+    typeWriter = document.querySelector(".typeWriter");
+}
+
+function now(){
+    landingPage = document.querySelector(".landingPage");
 }
 
 const main = document.querySelector("main");
@@ -42,7 +48,9 @@ function toggleAnimation(){
         // reset vars
         declare();
         events();
+        
     });
+    now()
 }
 
 function events(){
