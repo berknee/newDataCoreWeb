@@ -14,26 +14,34 @@
         
         <div class="contactBox">
             
-            <form action="https://formsubmit.co/potatoaim365@gmail.com" method="POST">
+            <form action="https://formsubmit.co/bcf0ebdbeb1866105a48fd5876f64e49" method="POST">
+                <!-- honeypot -->
+                <input type="text"  name = "_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+                <input type="hidden"  name = "_captcha" value="false">
+
+                <input type="hidden"  name = "_next" value="https://berknee.github.io/newDataCoreWeb/success.html">
+
                 <div class="contactRow">
                     <div class="inputGroup">
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="Name" required>
                     <label for="name"><i class="fas fa-user"></i> Your Name</label>
                     </div>
 
                     <div class="inputGroup">
-                    <input type="text" id="number" required>
+                    <input type="text" id="number" name="Phone&nbsp;Number" required>
                     <label for="number"><i class="fas fa-phone-square"></i> Phone No.</label>
                     </div>
                 </div>
                     
                 <div class="inputGroup">
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="Email" required>
                     <label for="email"><i class="fas fa-envelope"></i> Email</label>
                 </div>
                     
                 <div class="inputGroup">
-                    <textarea id="message" rows="8" required></textarea>
+                    <textarea id="message" rows="8" name="Questions,&nbsp;Comments" required></textarea>
                     <label for="message"><i class="fas fa-comments"></i> Your Message</label>
                 </div>
                     
